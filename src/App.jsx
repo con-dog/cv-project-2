@@ -3,7 +3,7 @@ import CV from './components/CV';
 import Form from './components/Form';
 
 function App() {
-  const [isEditing, setMode] = useState(true);
+  const [isEditing, setIsEditing] = useState(true);
   const [texts, setTexts] = useState({
     firstName: '',
     lastName: '',
@@ -28,7 +28,7 @@ function App() {
       });
     }
 
-    setMode(!isEditing);
+    setIsEditing(!isEditing);
   };
 
   const handleTextChange = (e) => {
@@ -49,7 +49,7 @@ function App() {
       {isEditing ? (
         <Form handleTextChange={handleTextChange} texts={texts} />
       ) : (
-        <CV />
+        <CV details={details} />
       )}
     </div>
   );

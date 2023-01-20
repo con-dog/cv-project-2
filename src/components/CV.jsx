@@ -1,8 +1,13 @@
 import React from 'react';
+import CVHeader from './CVHeader';
 
-function CV() {
+function CV(props) {
+  const { details } = props;
+  const { firstName, lastName } = details;
   return (
-    <div />
+    <div>
+      <CVHeader firstName={firstName} lastName={lastName} />
+    </div>
   );
 }
 
