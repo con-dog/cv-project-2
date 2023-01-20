@@ -9,8 +9,25 @@ function App() {
     lastName: '',
     email: '',
   });
+  const [details, setDetails] = useState({
+    firstName: texts.firstName,
+    lastName: texts.lastName,
+    email: texts.email,
+  });
 
   const handleOnClick = () => {
+    if (isEditing) {
+      const updatedValues = {
+        firstName: texts.firstName,
+        lastName: texts.lastName,
+        email: texts.email,
+      };
+      setDetails({
+        ...details,
+        ...updatedValues,
+      });
+    }
+
     setMode(!isEditing);
   };
 
@@ -18,18 +35,22 @@ function App() {
     const updatedValue = {
       [e.target.id]: e.target.value,
     };
-    setTexts(
-      {
-        ...texts,
-        ...updatedValue,
-      },
-    );
+    setTexts({
+      ...texts,
+      ...updatedValue,
+    });
   };
 
   return (
     <div>
-      <button type="button" onClick={handleOnClick}>{isEditing ? 'Generate' : 'Edit'}</button>
-      {isEditing ? <Form handleTextChange={handleTextChange} texts={texts} /> : <CV />}
+      <button type="button" onClick={handleOnClick}>
+        {isEditing ? 'Generate' : 'Edit'}
+      </button>
+      {isEditing ? (
+        <Form handleTextChange={handleTextChange} texts={texts} />
+      ) : (
+        <CV />
+      )}
     </div>
   );
 }
