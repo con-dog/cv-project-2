@@ -21,7 +21,7 @@ function EditCardPerson(props) {
       <input
         id="email"
         type="text"
-        placeholder="Email name"
+        placeholder="Email"
         onChange={handleTextChange}
         value={email}
       />
