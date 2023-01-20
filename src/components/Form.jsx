@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Form() {
+function Form(props) {
+  const { handleTextChange, texts } = props;
   return (
     <div>
-      <input type="text" placeholder="First name" />
-      <input type="text" placeholder="Last name" />
-      <input type="text" placeholder="Email name" />
+      <input id="firstName" type="text" placeholder="First name" onChange={handleTextChange} value={texts.firstName} />
+      <input id="lastName" type="text" placeholder="Last name" />
+      <input id="email" type="text" placeholder="Email name" />
     </div>
   );
 }

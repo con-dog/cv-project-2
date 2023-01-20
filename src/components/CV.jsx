@@ -1,7 +1,9 @@
-// import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const CV = () => {
-
-};
+function CV() {
+  return (
+    <div />
+  );
+}
 
 export default CV;

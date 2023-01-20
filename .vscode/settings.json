@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "public": true,
+        "node_modules": true,
+        "README.md": true,
+        "package-lock.json": true,
+        ".gitignore": true,
+        ".vscode": true
+    },
+    "workspace.isHidden": true
+}

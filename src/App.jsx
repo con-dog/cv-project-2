@@ -4,15 +4,32 @@ import Form from './components/Form';
 
 function App() {
   const [isEditing, setMode] = useState(true);
+  const [texts, setTexts] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+  });
 
-  const toggleMode = () => {
+  const handleOnClick = () => {
     setMode(!isEditing);
+  };
+
+  const handleTextChange = (e) => {
+    const updatedValue = {
+      [e.target.id]: e.target.value,
+    };
+    setTexts(
+      {
+        ...texts,
+        ...updatedValue,
+      },
+    );
   };
 
   return (
     <div>
-      <button type="button" onClick={toggleMode}>{isEditing ? 'Generate' : 'Edit'}</button>
-      {isEditing ? <Form /> : <CV />}
+      <button type="button" onClick={handleOnClick}>{isEditing ? 'Generate' : 'Edit'}</button>
+      {isEditing ? <Form handleTextChange={handleTextChange} texts={texts} /> : <CV />}
     </div>
   );
 }

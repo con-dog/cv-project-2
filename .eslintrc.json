@@ -26,6 +26,8 @@
                     ".jsx"
                 ]
             }
-        ]
+        ],
+        "react/prop-types": 0,
+        "prop-types": 0
     }
 }
