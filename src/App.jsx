@@ -8,11 +8,17 @@ function App() {
     firstName: '',
     lastName: '',
     email: '',
+    job: '',
+    company: '',
+    description: '',
   });
   const [details, setDetails] = useState({
     firstName: texts.firstName,
     lastName: texts.lastName,
     email: texts.email,
+    job: texts.job,
+    company: texts.company,
+    description: texts.description,
   });
 
   const handleOnClick = () => {
@@ -21,6 +27,9 @@ function App() {
         firstName: texts.firstName,
         lastName: texts.lastName,
         email: texts.email,
+        job: texts.job,
+        company: texts.company,
+        description: texts.description,
       };
       setDetails({
         ...details,

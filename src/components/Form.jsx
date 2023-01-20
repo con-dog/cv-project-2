@@ -1,5 +1,6 @@
 import React from 'react';
 import EditCardPerson from './EditCardPerson';
+import EditCardJobs from './EditCardJobs';
 
 function Form(props) {
   const { handleTextChange, texts } = props;
@@ -10,6 +11,12 @@ function Form(props) {
         firstName={texts.firstName}
         lastName={texts.lastName}
         email={texts.email}
+      />
+      <EditCardJobs
+        handleTextChange={handleTextChange}
+        job={texts.job}
+        company={texts.company}
+        description={texts.description}
       />
     </div>
   );
