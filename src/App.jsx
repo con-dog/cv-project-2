@@ -11,6 +11,8 @@ function App() {
     job: '',
     company: '',
     description: '',
+    university: '',
+    degree: '',
   });
   const [details, setDetails] = useState({
     firstName: texts.firstName,
@@ -19,6 +21,8 @@ function App() {
     job: texts.job,
     company: texts.company,
     description: texts.description,
+    university: texts.university,
+    degree: texts.degree,
   });
 
   const handleOnClick = () => {
@@ -30,6 +34,8 @@ function App() {
         job: texts.job,
         company: texts.company,
         description: texts.description,
+        university: texts.university,
+        degree: texts.degree,
       };
       setDetails({
         ...details,

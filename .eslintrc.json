@@ -19,6 +19,7 @@
     ],
     "rules": {
         "object-curly-newline": "off",
+        "operator-linebreak": "warn",
         "react/jsx-filename-extension": [
             1,
             {
