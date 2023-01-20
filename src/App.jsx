@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import CV from './components/CV';
+import Form from './components/Form';
 
-const App = () => {
+function App() {
   const [mode, setMode] = useState('Edit');
 
   const toggleMode = () => {
@@ -13,9 +15,11 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={toggleMode}>{mode}</button>
+      <button type="button" onClick={toggleMode}>{mode}</button>
+      <Form />
+      <CV />
     </div>
   );
-};
+}
 
 export default App;
