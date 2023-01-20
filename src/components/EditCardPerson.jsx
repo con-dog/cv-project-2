@@ -1,6 +1,6 @@
 import React from 'react';
 
-function EditPerson(props) {
+function EditCardPerson(props) {
   const { handleTextChange, firstName, lastName, email } = props;
   return (
     <div>
@@ -29,4 +29,4 @@ function EditPerson(props) {
   );
 }
 
-export default EditPerson;
+export default EditCardPerson;
