@@ -3,21 +3,16 @@ import CV from './components/CV';
 import Form from './components/Form';
 
 function App() {
-  const [mode, setMode] = useState('Edit');
+  const [isEdit, setMode] = useState(true);
 
   const toggleMode = () => {
-    if (mode === 'Edit') {
-      setMode('Generate');
-    } else {
-      setMode('Edit');
-    }
+    setMode(!isEdit);
   };
 
   return (
     <div>
-      <button type="button" onClick={toggleMode}>{mode}</button>
-      <Form />
-      <CV />
+      <button type="button" onClick={toggleMode}>{isEdit ? 'Generate' : 'Edit'}</button>
+      {isEdit ? <Form /> : <CV />}
     </div>
   );
 }
